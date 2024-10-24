@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -45,7 +44,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-            docLayoutComponent: "@theme/DocPage",
+            //docLayoutComponent: "@theme/DocPage",
             docItemComponent: "@theme/ApiItem", // derived from docusaurus-theme-openapi-docs
             routeBasePath: '/', // Serve the docs at the site's root
         },
@@ -173,8 +172,8 @@ const config = {
         respectPrefersColorScheme: true,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
         additionalLanguages: [
           'bash',
           'csharp',
